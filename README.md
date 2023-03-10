@@ -1,4 +1,7 @@
-# Drupal 9 Ready
+# Drupal 9 Ready [PAS READY DU TOUT]
+
+> Je suis Mr Bug, j'en ai eu marre, je fais une pause ;)
+> <br/>Si tu veux, tu peux test 😉.
 
 Ce dépôt a été créé pour mettre à disposition un site Drupal 9 prêt à l'emploi.
 
