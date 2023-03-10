@@ -8,7 +8,9 @@ Ce Drupal est prêt à l'emploi. Il vous suffit de le cloner sur votre PC et de 
 
 ### Prérequis
 
-- PHP : **v7.3** (ou ultérieur)
+- PHP : **v8.1.6** (ou ultérieur)
+
+> **Attention :** Peut fonctionné avec PHP 7, mais des problèmes de compatibilité risque d'apparaître.
 
 ### Informations
 
