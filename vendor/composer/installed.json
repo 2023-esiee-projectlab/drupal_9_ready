@@ -625,7 +625,6 @@
                 "drupal/core-uuid": "self.version",
                 "drupal/core-version": "self.version"
             },
-            "time": "2023-03-01T14:08:11+00:00",
             "type": "drupal-core",
             "extra": {
                 "drupal-scaffold": {
@@ -658,14 +657,10 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "files": [
-                    "includes/bootstrap.inc",
-                    "includes/guzzle_php81_shim.php"
-                ],
                 "psr-4": {
                     "Drupal\\Core\\": "lib/Drupal/Core",
-                    "Drupal\\Driver\\": "../drivers/lib/Drupal/Driver",
-                    "Drupal\\Component\\": "lib/Drupal/Component"
+                    "Drupal\\Component\\": "lib/Drupal/Component",
+                    "Drupal\\Driver\\": "../drivers/lib/Drupal/Driver"
                 },
                 "classmap": [
                     "lib/Drupal.php",
@@ -691,16 +686,21 @@
                     "lib/Drupal/Core/Http/InputBag.php",
                     "lib/Drupal/Core/Installer/InstallerRedirectTrait.php",
                     "lib/Drupal/Core/Site/Settings.php"
+                ],
+                "files": [
+                    "includes/bootstrap.inc",
+                    "includes/guzzle_php81_shim.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "pre-autoload-dump": [
+                    "Drupal\\Core\\Composer\\Composer::preAutoloadDump"
+                ]
+            },
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "support": {
-                "source": "https://github.com/drupal/core/tree/9.5.4"
-            },
             "install-path": "../../core"
         },
         {
@@ -728,7 +728,6 @@
             "require-dev": {
                 "composer/composer": "^1.8@stable"
             },
-            "time": "2022-06-19T16:14:18+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Drupal\\Composer\\Plugin\\Scaffold\\Plugin",
@@ -742,7 +741,6 @@
                     "Drupal\\Composer\\Plugin\\Scaffold\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -751,9 +749,6 @@
             "keywords": [
                 "drupal"
             ],
-            "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.5.4"
-            },
             "install-path": "../drupal/core-composer-scaffold"
         },
         {
@@ -775,7 +770,6 @@
                 "composer-plugin-api": "^1.1 || ^2",
                 "php": ">=7.3.0"
             },
-            "time": "2022-02-24T17:40:53+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Drupal\\Composer\\Plugin\\ProjectMessage\\MessagePlugin"
@@ -786,7 +780,6 @@
                     "Drupal\\Composer\\Plugin\\ProjectMessage\\": "."
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -795,9 +788,6 @@
             "keywords": [
                 "drupal"
             ],
-            "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.5.4"
-            },
             "install-path": "../drupal/core-project-message"
         },
         {
@@ -876,16 +866,11 @@
             "conflict": {
                 "webflo/drupal-core-strict": "*"
             },
-            "time": "2023-03-01T14:08:11+00:00",
             "type": "metapackage",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
-            "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.5.4"
-            },
             "install-path": null
         },
         {
@@ -907,7 +892,6 @@
                 "composer-plugin-api": "^1.1 || ^2",
                 "php": ">=7.3.0"
             },
-            "time": "2022-12-07T11:22:43+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Drupal\\Composer\\Plugin\\VendorHardening\\VendorHardeningPlugin"
@@ -918,7 +902,6 @@
                     "Drupal\\Composer\\Plugin\\VendorHardening\\": "."
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -927,9 +910,6 @@
             "keywords": [
                 "drupal"
             ],
-            "support": {
-                "source": "https://github.com/drupal/core-vendor-hardening/tree/9.5.4"
-            },
             "install-path": "../drupal/core-vendor-hardening"
         },
         {
@@ -5001,7 +4981,5 @@
             },
             "install-path": "../typo3/phar-stream-wrapper"
         }
-    ],
-    "dev": true,
-    "dev-package-names": []
+    ]
 }
